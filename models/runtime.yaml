@@ -1,0 +1,11 @@
+apiVersion: serving.kserve.io/v1alpha1
+kind: ClusterServingRuntime
+metadata:
+  name: test-runtime
+spec:
+  supportedModelFormats:
+    - name: sklearn
+      version: "1"
+  containers:
+    - name: kserve-container
+      image: kserve/sklearnserver:v0.16.0
